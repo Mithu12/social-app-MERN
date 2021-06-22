@@ -10,7 +10,6 @@ function ImageDropDiv({
   setMediaPreview,
   setMedia
 }) {
-
   return (
     <>
       <Form.Field>
