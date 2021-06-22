@@ -62,8 +62,6 @@ function CreatePost({ user, setPosts }) {
     setLoading(false);
   };
 
-  console.log('yoyo')
-
   return (
     <>
       <Form error={error !== null} onSubmit={handleSubmit}>

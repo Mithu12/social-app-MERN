@@ -43,7 +43,7 @@ function Index({ user, postsData, errorLoading }) {
   };
 
   if (posts.length === 0 || errorLoading) return <NoPosts />;
-  console.log('id')
+
   return (
     <>
       {showToastr && <PostDeleteToastr />}

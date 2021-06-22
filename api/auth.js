@@ -23,7 +23,6 @@ router.get("/", authMiddleware, async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-  console.log(req.body.user)
   const { email, password } = req.body.user;
 
   if (!isEmail(email)) return res.status(401).send("Invalid Email");
