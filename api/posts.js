@@ -81,7 +81,8 @@ router.get("/", authMiddleware, async (req, res) => {
     }
     //
     else {
-      for (let i = 0; i < loggedUser.following.length; i++) {
+      
+    for (let i = 0; i < loggedUser.following.length; i++) {
         const foundPostsFromFollowing = posts.filter(
           post =>
             post.user._id.toString() === loggedUser.following[i].user.toString() 
@@ -98,8 +99,6 @@ router.get("/", authMiddleware, async (req, res) => {
 
      postsToBeSent.length > 0 &&
       postsToBeSent.sort((a, b) => [new Date(b.createdAt) - new Date(a.createdAt)]);
-      
-      
     return res.json(postsToBeSent);
   } catch (error) {
     console.error(error);
