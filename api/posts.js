@@ -45,7 +45,7 @@ router.get("/", authMiddleware, async (req, res) => {
     let posts;
 
     if (number === 1) {
-      posts = await PostModel.find()
+      posts = await PostModel.find({})
         .limit(size)
         .sort({ createdAt: -1 })
         .populate("user")

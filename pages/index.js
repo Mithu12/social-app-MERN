@@ -43,7 +43,7 @@ function Index({ user, postsData, errorLoading }) {
   };
 
   if (posts.length === 0 || errorLoading) return <NoPosts />;
-
+  console.log('id')
   return (
     <>
       {showToastr && <PostDeleteToastr />}
@@ -56,7 +56,7 @@ function Index({ user, postsData, errorLoading }) {
           loader={<PlaceHolderPosts />}
           endMessage={<EndMessage />}
           dataLength={posts.length}>
-          {posts && posts.map(post => (
+          {posts.map(post => (
             <CardPost
               key={post._id}
               post={post}
